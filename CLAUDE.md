@@ -71,7 +71,6 @@ npm run preview
 
 - **CLAUDE.md** (this file): Technical guidance for Claude Code instances. Update when tech stack, commands, or collaboration guidelines change.
 - **README.md**: Public-facing project description and setup instructions. Update when project description, installation, or usage changes.
-- **PROJECT_PLAN.md**: Detailed project roadmap and phase planning. Update when adding phases, completing milestones, or changing project scope.
 
 ## Development Best Practices
 
