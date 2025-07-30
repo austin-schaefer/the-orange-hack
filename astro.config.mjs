@@ -50,6 +50,7 @@ export default defineConfig({
 						{ label: 'Spell list', slug: 'magic/spell-list' },
 					],
 				},
+				{ label: 'Component test', slug: 'component-test' },
 			],
 		}),
 	],

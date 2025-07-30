@@ -1,0 +1,212 @@
+---
+title: Component test
+description: A comprehensive test page for all markdown and Starlight components
+---
+
+This page demonstrates all available markdown and Starlight components to help evaluate styling and typography.
+
+## Heading Level 2
+
+### Heading Level 3
+
+#### Heading Level 4
+
+##### Heading Level 5
+
+###### Heading Level 6
+
+## Text Formatting
+
+This is **bold text** and this is *italic text*. You can also use ***bold and italic*** together.
+
+Here's some `inline code` and a [link to Google](https://google.com).
+
+~~Strikethrough text~~ is also supported.
+
+> This is a blockquote. It can contain multiple paragraphs and other formatting.
+> 
+> Like this second paragraph with *italic* and **bold** text.
+
+## Lists
+
+### Unordered Lists
+
+- First item
+- Second item
+  - Nested item
+  - Another nested item
+    - Third level nesting
+- Third item with **bold** text
+- Fourth item with `inline code`
+
+### Ordered Lists
+
+1. First numbered item
+2. Second numbered item
+   1. Nested numbered item
+   2. Another nested numbered item
+      1. Third level nesting
+3. Third numbered item
+4. Fourth numbered item
+
+### Task Lists
+
+- [x] Completed task
+- [ ] Incomplete task
+
+## Code Blocks
+
+### Inline Code
+Use `npm install` to install dependencies.
+
+### Code Block (No Language)
+```
+function hello() {
+    console.log("Hello, world!");
+}
+```
+
+## Tables
+
+### Basic Table
+| Ability Score | Modifier | Description |
+|---------------|----------|-------------|
+| Strength      | +3       | Physical power |
+| Dexterity     | +1       | Agility and reflexes |
+| Constitution  | +2       | Health and stamina |
+| Intelligence  | +0       | Reasoning ability |
+| Wisdom        | +1       | Perception and insight |
+| Charisma      | -1       | Force of personality |
+
+### Complex Table
+| Weapon | Damage | Type | Range | Weight | Properties |
+|--------|--------|------|-------|--------|------------|
+| Longsword | 1d8 | Slashing | Melee | 3 lb. | **Versatile** (1d10) |
+| Shortbow | 1d6 | Piercing | 80/320 ft. | 2 lb. | *Ammunition*, **Two-handed** |
+| Dagger | 1d4 | Piercing | 20/60 ft. | 1 lb. | **Finesse**, *Light*, `Thrown` |
+
+### Complex Table with Line Breaks
+
+<table>
+  <thead>
+    <tr>
+      <th>Spell</th>
+      <th>Level</th>
+      <th>Casting Time</th>
+      <th>Range</th>
+      <th>Components</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Fireball</strong></td>
+      <td>3rd</td>
+      <td>1 action</td>
+      <td>150 feet</td>
+      <td>V, S, M<br/><em>(a tiny ball of bat guano and sulfur)</em></td>
+      <td>
+        A bright streak flashes from your pointing finger to a point you choose within range.<br/>
+        <br/>
+        Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw.<br/>
+        <br/>
+        * **Success:** Half damage<br/>
+        * **Failure:** 8d6 fire damage
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## Horizontal Rules
+
+Above this line.
+
+---
+
+Between the lines.
+
+***
+
+Below this line.
+
+## Images and Media
+
+![Placeholder Image](https://via.placeholder.com/400x200/orange/white?text=D%26D+Placeholder)
+
+## Starlight-Specific Components
+
+:::note
+This is a note callout. It's useful for highlighting important information.
+:::
+
+:::tip
+This is a tip callout. Great for helpful advice and best practices.
+:::
+
+:::caution
+This is a caution callout. Use it to warn about potential issues.
+:::
+
+:::danger
+This is a danger callout. Reserve for critical warnings.
+:::
+
+### Tabs Example
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Tabs>
+  <TabItem label="Fighter">
+    **Hit Die:** d10  
+    **Primary Ability:** Strength or Dexterity  
+    **Saving Throw Proficiencies:** Strength, Constitution
+  </TabItem>
+  <TabItem label="Wizard">
+    **Hit Die:** d6  
+    **Primary Ability:** Intelligence  
+    **Saving Throw Proficiencies:** Intelligence, Wisdom
+  </TabItem>
+  <TabItem label="Scout">
+    **Hit Die:** d8  
+    **Primary Ability:** Dexterity  
+    **Saving Throw Proficiencies:** Strength, Dexterity
+  </TabItem>
+</Tabs>
+
+### Card Grid Example
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="Character Creation" icon="pencil">
+    Learn how to create your character with our step-by-step guide.
+  </Card>
+  <Card title="Combat Rules" icon="swords">
+    Master the combat system with detailed procedures and examples.
+  </Card>
+  <Card title="Magic System" icon="magic">
+    Discover how spellcasting works in Orange Hack.
+  </Card>
+  <Card title="Equipment" icon="bag">
+    Browse weapons, armor, and adventuring gear.
+  </Card>
+</CardGrid>
+
+### Single Cards
+
+<Card title="Quick Reference" icon="information">
+  Keep this handy reference nearby during your game sessions.
+  
+  - **Initiative:** Roll 1d6 + Dex modifier
+  - **Attack Roll:** 1d20 + attribute + level
+  - **Damage:** Weapon die + attribute modifier
+</Card>
+
+## Footnotes
+
+This text has a footnote reference[^1].
+
+Here's another footnote[^note].
+
+[^1]: This is the first footnote.
+[^note]: This is a named footnote with more details about the game mechanics.
