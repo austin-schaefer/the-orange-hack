@@ -43,10 +43,9 @@
 .sl-markdown-content th {
   background-color: var(--sl-color-gray-6);
   color: var(--sl-color-white);
-  padding: 0.75rem;
+  padding: 0.75rem 0.5rem;
   text-align: left;
   font-weight: bold;
-  white-space: nowrap; /* Prevent text wrapping in headers */
 }
 
 /* Special handling for table headers with code elements */
@@ -62,7 +61,7 @@
 
 /* Table cell padding */
 .sl-markdown-content td {
-  padding: 0.75rem;
+  padding: 0.75rem 0.5rem;
 }
 
 /* Light mode background color */
@@ -103,4 +102,50 @@
 /* Hide social icons container and separator */
 .social-icons {
 	display: none;
+}
+
+/* Custom callout colors to match site theme */
+:root {
+  /* Override blue colors for Note callouts */
+  --sl-color-blue: #4a5568;
+  --sl-color-blue-low: #2d3748;
+  --sl-color-blue-high: #90cdf4;
+  
+  /* Override purple colors for Tip callouts */
+  --sl-color-purple: #38a169;
+  --sl-color-purple-low: #2f855a;
+  --sl-color-purple-high: #68d391;
+  
+  /* Override orange colors for Caution callouts */
+  --sl-color-orange: #a0783c;
+  --sl-color-orange-low: #744c2b;
+  --sl-color-orange-high: #d4a574;
+  
+  /* Override red colors for Danger callouts */
+  --sl-color-red: #a85c5c;
+  --sl-color-red-low: #7a4040;
+  --sl-color-red-high: #d49999;
+}
+
+/* Light mode callout colors */
+:root[data-theme='light'] {
+  /* Override blue colors for Note callouts */
+  --sl-color-blue: #4299e1;
+  --sl-color-blue-low: #ebf8ff;
+  --sl-color-blue-high: #2b6cb0;
+  
+  /* Override purple colors for Tip callouts */
+  --sl-color-purple: #38a169;
+  --sl-color-purple-low: #f0fff4;
+  --sl-color-purple-high: #38a169;
+  
+  /* Override orange colors for Caution callouts */
+  --sl-color-orange: #b7791f;
+  --sl-color-orange-low: #f7fafc;
+  --sl-color-orange-high: #9c4221;
+  
+  /* Override red colors for Danger callouts */
+  --sl-color-red: #e53e3e;
+  --sl-color-red-low: #fed7d7;
+  --sl-color-red-high: #c53030;
 }
