@@ -76,3 +76,4 @@ npm run preview
 ## Development Best Practices
 
 - Always commit changes after each logical unit of work to maintain a clear, traceable project history
+- **Do not run the dev server to test CSS/styling changes** - Claude cannot see the website, so testing visual changes is not possible

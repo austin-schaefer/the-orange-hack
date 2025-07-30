@@ -24,27 +24,35 @@
 
 /* Reduce top margin on h2 headings - override Starlight's default 1.5em */
 .sl-markdown-content h2:not(:where(.not-content *)) {
-  margin-top: 1.0em !important;
+  margin-top: 1.0em;
 }
 
 /* Also handle h2 headings with anchor links (wrapped in .sl-heading-wrapper) */
 .sl-markdown-content .sl-heading-wrapper.level-h2 {
-  margin-top: 1.0em !important;
+  margin-top: 1.0em;
 }
 
 /* Table styling */
 .sl-markdown-content table {
   border-collapse: collapse;
   width: 100%;
+  table-layout: auto; /* Allow automatic column sizing */
 }
 
 /* Simplified table styling */
 .sl-markdown-content th {
-  background-color: var(--sl-color-gray-6) !important;
-  color: var(--sl-color-white) !important;
+  background-color: var(--sl-color-gray-6);
+  color: var(--sl-color-white);
   padding: 0.75rem;
   text-align: left;
   font-weight: bold;
+  white-space: nowrap; /* Prevent text wrapping in headers */
+}
+
+/* Special handling for table headers with code elements */
+.sl-markdown-content th code {
+  white-space: nowrap; /* Ensure code elements don't wrap */
+  font-family: var(--sl-font-system-mono); /* Use monospace font explicitly */
 }
 
 /* Simple alternating rows */
@@ -94,5 +102,5 @@
 
 /* Hide social icons container and separator */
 .social-icons {
-	display: none !important;
+	display: none;
 }
