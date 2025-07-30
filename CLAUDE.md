@@ -21,7 +21,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Install dependencies
 npm install
 
-# Start development server
+# Start development server (runs on localhost:4321)
 npm run dev
 
 # Build for production
@@ -54,6 +54,16 @@ npm run preview
 - **Content-focused** - easy to add new content without touching code
 - **Built-in search** via Starlight
 - **Clean, readable design** prioritized
+
+## Content Structure
+
+**Current Status:** Complete D&D documentation structure implemented with placeholder content
+
+**Important Rules:**
+- All content files MUST have YAML frontmatter with `title:` field
+- Use sentence case for titles (e.g., "Create a character" not "Create a Character")
+- Navigation structure is defined in `astro.config.mjs` sidebar configuration
+- NEVER change the author's content - only modify site code/structure
 
 ## Documentation File Purposes
 
