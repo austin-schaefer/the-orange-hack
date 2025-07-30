@@ -4,11 +4,14 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://austin-schaefer.github.io/the-orange-hack/',
+	outDir: 'dist',
+	base: '/the-orange-hack/', // important for GitHub Pages!
 	integrations: [
 		starlight({
-			title: 'Orange Hack',
+			title: 'The Orange Hack',
 			customCss: ['./src/styles/custom.css'],
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/austinleegordon/orange-hack-site' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/austin-schaefer/the-orange-hack' }],
 			sidebar: [
 				{
 					label: 'Characters',
