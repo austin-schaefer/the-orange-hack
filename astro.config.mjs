@@ -11,6 +11,9 @@ export default defineConfig({
 		starlight({
 			title: 'The Orange Hack',
 			customCss: ['./src/styles/custom.css'],
+			components: {
+				SiteTitle: './src/components/SiteTitle.astro',
+			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/austin-schaefer/the-orange-hack' }],
 			sidebar: [
 				{

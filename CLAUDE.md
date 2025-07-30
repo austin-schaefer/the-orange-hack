@@ -54,6 +54,7 @@ npm run preview
 - **Content-focused** - easy to add new content without touching code
 - **Built-in search** via Starlight
 - **Clean, readable design** prioritized
+- **Component customization okay** - Starlight components can be overridden in `/src/components/` when that's the best solution (cleaner than complex CSS workarounds)
 
 ## Content Structure
 
