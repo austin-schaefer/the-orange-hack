@@ -14,7 +14,7 @@ export default defineConfig({
 			components: {
 				SiteTitle: './src/components/SiteTitle.astro',
 			},
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/austin-schaefer/the-orange-hack' }],
+			// social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/austin-schaefer/the-orange-hack' }],
 			sidebar: [
 				{
 					label: 'Characters',

@@ -91,3 +91,8 @@
 	--sl-color-gray-7: #fff4ed;
 	--sl-color-black: #ffffff;
 }
+
+/* Hide social icons container and separator */
+.social-icons {
+	display: none !important;
+}
