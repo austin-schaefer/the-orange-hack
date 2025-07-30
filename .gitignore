@@ -26,3 +26,4 @@ pnpm-debug.log*
 # VS code
 
 .vscode/
+/.claude
