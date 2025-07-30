@@ -10,161 +10,32 @@
   --sl-font-system-mono: 'Space Mono', ui-monospace, SFMono-Regular, 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
-/* Light mode colors */
+/* Dark mode colors. */
 :root {
-  /* Primary accent colors */
-  --sl-color-accent-low: #FFE4D6;
-  --sl-color-accent: #FF6B35;
-  --sl-color-accent-high: #E55934;
-  
-  /* Background colors */
-  --sl-color-bg: #F7F3E9;
-  --sl-color-bg-nav: #F0EAD8;
-  --sl-color-bg-sidebar: #F0EAD8;
-  
-  /* Text colors */
-  --sl-color-text: #2F1B14;
-  --sl-color-text-accent: #E55934;
-  
-  /* Gray scale */
-  --sl-color-gray-1: #F5F1E8;
-  --sl-color-gray-2: #EDEBE0;
-  --sl-color-gray-3: #DEB887;
-  --sl-color-gray-4: #A0522D;
-  --sl-color-gray-5: #8B4513;
-  --sl-color-gray-6: #2F1B14;
+	--sl-color-accent-low: #421200;
+	--sl-color-accent: #b13f00;
+	--sl-color-accent-high: #fcb59b;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #ffe9db;
+	--sl-color-gray-2: #dbbaa6;
+	--sl-color-gray-3: #b97b53;
+	--sl-color-gray-4: #80471e;
+	--sl-color-gray-5: #592900;
+	--sl-color-gray-6: #401b00;
+	--sl-color-black: #281102;
 }
-
-/* Dark mode colors - clean, high-contrast design */
-[data-theme='dark'] {
-  /* Primary accent colors - warm orange maintained */
-  --sl-color-accent-low: #2D1B0F;
-  --sl-color-accent: #FF8C5A;
-  --sl-color-accent-high: #FFB088;
-  
-  /* Background colors - clear elevation hierarchy */
-  --sl-color-bg: #1C1C1E;           /* Main content - neutral dark */
-  --sl-color-bg-nav: #0F0F10;       /* Top nav - deepest black */  
-  --sl-color-bg-sidebar: #0F0F10;   /* Left sidebar - deepest black */
-  
-  /* Text colors - high contrast white on dark */
-  --sl-color-text: #FFFFFF;
-  --sl-color-text-accent: #FF8C5A;
-  
-  /* Gray scale - clean neutral progression */
-  --sl-color-gray-1: #0F0F10;       /* Navigation background */
-  --sl-color-gray-2: #1C1C1E;       /* Content background */
-  --sl-color-gray-3: #2C2C2E;       /* Hover states */
-  --sl-color-gray-4: #8E8E93;       /* Muted text */
-  --sl-color-gray-5: #C7C7CC;       /* Secondary text */
-  --sl-color-gray-6: #FFFFFF;       /* Primary text */
-}
-
-/* Custom font assignments */
-
-/* Top-level navigation items - Pirata One */
-.sidebar nav > ul > li > a,
-.sidebar nav > ul > li > details > summary {
-  font-family: 'Pirata One', cursive;
-  font-weight: 400;
-}
-
-/* All other headings - Alegreya */
-h1, h2, h3, h4, h5, h6,
-.sl-markdown-content h1,
-.sl-markdown-content h2,
-.sl-markdown-content h3,
-.sl-markdown-content h4,
-.sl-markdown-content h5,
-.sl-markdown-content h6 {
-  font-family: 'Alegreya', serif;
-}
-
-/* Site title uses Alegreya */
-.site-title {
-  font-family: 'Alegreya', serif !important;
-}
-
-/* Force ALL sidebar navigation elements to be visible */
-.sidebar *,
-.sidebar a,
-.sidebar summary,
-.sidebar span,
-[data-starlight-sidebar] *,
-starlight-menu-button *,
-nav[aria-label="Main"] * {
-  color: var(--sl-color-text) !important;
-}
-
-.sidebar a:hover,
-.sidebar summary:hover,
-[data-starlight-sidebar] a:hover {
-  background-color: var(--sl-color-gray-3) !important;
-  color: var(--sl-color-text) !important;
-  border-radius: 4px;
-}
-
-.sidebar [aria-current="page"],
-[data-starlight-sidebar] [aria-current="page"] {
-  background-color: #FFE4D6 !important;
-  color: var(--sl-color-text) !important;
-  font-weight: 600;
-  border-radius: 4px;
-  border-left: 3px solid var(--sl-color-accent) !important;
-}
-
-/* Search and theme toggle fixes */
-[data-starlight-search] input {
-  color: var(--sl-color-text) !important;
-  background-color: var(--sl-color-bg) !important;
-  border: 1px solid var(--sl-color-gray-3) !important;
-}
-
-[data-starlight-search] input::placeholder {
-  color: var(--sl-color-gray-4) !important;
-  opacity: 0.8;
-}
-
-/* Theme toggle button */
-button[aria-label*="theme"],
-.theme-toggle,
-[data-starlight-theme-select] button {
-  color: var(--sl-color-text) !important;
-}
-
-button[aria-label*="theme"]:hover,
-.theme-toggle:hover,
-[data-starlight-theme-select] button:hover {
-  color: var(--sl-color-accent) !important;
-}
-
-/* Dark mode specific overrides for selected state */
-[data-theme='dark'] .sidebar [aria-current="page"],
-[data-theme='dark'] [data-starlight-sidebar] [aria-current="page"] {
-  background-color: #4A2C1A !important;
-  border-left: 3px solid #FF8C5A !important;
-}
-
-/* Right sidebar (TOC) visibility fixes */
-.right-sidebar *,
-[data-starlight-toc] *,
-.sl-toc * {
-  color: var(--sl-color-text) !important;
-}
-
-.right-sidebar a:hover,
-[data-starlight-toc] a:hover,
-.sl-toc a:hover {
-  color: var(--sl-color-accent) !important;
-}
-
-/* Dark mode visual separation - add subtle borders */
-[data-theme='dark'] .sidebar,
-[data-theme='dark'] [data-starlight-sidebar] {
-  border-right: 1px solid #3D2F26;
-}
-
-[data-theme='dark'] .right-sidebar,
-[data-theme='dark'] [data-starlight-toc] {
-  border-left: 1px solid #3D2F26;
+/* Light mode colors. */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #ffc9b5;
+	--sl-color-accent: #b54000;
+	--sl-color-accent-high: #591b00;
+	--sl-color-white: #281102;
+	--sl-color-gray-1: #401b00;
+	--sl-color-gray-2: #592900;
+	--sl-color-gray-3: #80471e;
+	--sl-color-gray-4: #b97b53;
+	--sl-color-gray-5: #dbbaa6;
+	--sl-color-gray-6: #ffe9db;
+	--sl-color-gray-7: #fff4ed;
+	--sl-color-black: #ffffff;
 }
