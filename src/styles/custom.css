@@ -8,6 +8,44 @@
   
   /* Monospace/code - Space Mono */
   --sl-font-system-mono: 'Space Mono', ui-monospace, SFMono-Regular, 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  /* Orange Hack Color Scheme - Light Mode */
+  
+  /* Primary accent colors - main orange theme */
+  --sl-color-accent-low: #FFE4D6;     /* Very light orange for subtle backgrounds */
+  --sl-color-accent: #FF6B35;        /* Primary orange for links and highlights */
+  --sl-color-accent-high: #E55934;   /* Deeper orange for hover states */
+  
+  /* Background colors */
+  --sl-color-bg: #F7F3E9;            /* Warm cream background */
+  --sl-color-bg-nav: #F0EAD8;        /* Warm cream for top navigation */
+  --sl-color-bg-sidebar: #F0EAD8;    /* Warm cream for sidebar */
+  --sl-color-bg-inline-code: #EDEBE0; /* Code background */
+  
+  /* Text colors */
+  --sl-color-text: #2F1B14;          /* Dark brown for main text */
+  --sl-color-text-accent: #E55934;   /* Orange for accent text */
+  --sl-color-text-invert: #F7F3E9;   /* Light text for dark backgrounds */
+  
+  /* Border colors */
+  --sl-color-border: #DEB887;        /* Light tan borders */
+  --sl-color-border-accent: #FF6B35; /* Orange borders for emphasis */
+  
+  /* Component colors */
+  --sl-color-gray-1: #F5F1E8;        /* Lightest gray */
+  --sl-color-gray-2: #EDEBE0;        /* Light gray */
+  --sl-color-gray-3: #DEB887;        /* Medium tan */
+  --sl-color-gray-4: #A0522D;        /* Darker sienna */
+  --sl-color-gray-5: #8B4513;        /* Saddle brown */
+  --sl-color-gray-6: #2F1B14;        /* Dark chocolate */
+  
+  /* Navigation colors */
+  --sl-color-bg-nav: #F0EAD8;
+  --sl-nav-height: 3.5rem;
+  
+  /* Sidebar colors */
+  --sl-color-bg-sidebar: #F0EAD8;
+  --sl-sidebar-width: 20rem;
 }
 
 /* Custom font assignments */
@@ -17,6 +55,7 @@
 .sidebar nav > ul > li > details > summary {
   font-family: 'Pirata One', cursive;
   font-weight: 400;
+  color: var(--sl-color-text) !important; /* Ensure dark text for readability */
 }
 
 /* All other headings - Alegreya */
@@ -35,4 +74,79 @@ h1, h2, h3, h4, h5, h6,
 /* Ensure site title uses Alegreya instead of Pirata One */
 .site-title {
   font-family: 'Alegreya', serif !important;
+}
+
+/* Fix invisible navigation text with comprehensive selectors */
+
+/* Left sidebar navigation - all possible selectors */
+.sidebar nav a,
+.sidebar nav summary,
+.sidebar nav li a,
+.sidebar nav li summary,
+.sidebar .sl-sidebar-content a,
+.sidebar .sl-sidebar-content summary,
+.sidebar [data-starlight-sidebar] a,
+.sidebar [data-starlight-sidebar] summary,
+nav[aria-label="Main"] a,
+nav[aria-label="Main"] summary {
+  color: var(--sl-color-text) !important;
+}
+
+/* Top-level navigation items - Pirata One font with readable color */
+.sidebar nav > ul > li > a,
+.sidebar nav > ul > li > details > summary {
+  color: var(--sl-color-text) !important;
+}
+
+/* Nested navigation items */
+.sidebar nav ul ul a,
+.sidebar nav details details summary {
+  color: var(--sl-color-text) !important;
+}
+
+/* Active/current page styling with warm theme */
+.sidebar nav [aria-current="page"],
+.sidebar nav [aria-current="page"]:hover {
+  background-color: var(--sl-color-accent-low) !important;
+  color: var(--sl-color-text) !important;
+  font-weight: 600;
+}
+
+/* Hover states that maintain warm personality */
+.sidebar nav a:hover,
+.sidebar nav summary:hover {
+  background-color: var(--sl-color-gray-2) !important;
+  color: var(--sl-color-text) !important;
+}
+
+/* Right sidebar (table of contents) with warm styling */
+.right-sidebar nav a,
+.right-sidebar .sl-toc a,
+.right-sidebar [data-starlight-toc] a {
+  color: var(--sl-color-gray-5) !important; /* Medium brown for TOC */
+}
+
+.right-sidebar nav a:hover,
+.right-sidebar .sl-toc a:hover,
+.right-sidebar [data-starlight-toc] a:hover {
+  color: var(--sl-color-accent) !important; /* Orange on hover */
+}
+
+/* Fix search input styling */
+.search input,
+.search input[type="search"],
+[data-starlight-search] input,
+[data-starlight-search] input[type="search"] {
+  color: var(--sl-color-text) !important;
+  background-color: var(--sl-color-bg) !important;
+  border: 1px solid var(--sl-color-border) !important;
+}
+
+/* Search placeholder text */
+.search input::placeholder,
+.search input[type="search"]::placeholder,
+[data-starlight-search] input::placeholder,
+[data-starlight-search] input[type="search"]::placeholder {
+  color: var(--sl-color-gray-4) !important; /* Medium brown for placeholder */
+  opacity: 0.8;
 }
