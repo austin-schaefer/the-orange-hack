@@ -30,6 +30,58 @@
   margin-top: 1.0em !important;
 }
 
+/* Table styling */
+.sl-markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Table headers - light mode */
+:root[data-theme='light'] .sl-markdown-content th {
+  background-color: #854313 !important;
+  color: #F5E5D3 !important;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Table headers - dark mode */
+.sl-markdown-content th {
+  background-color: #401B00 !important;
+  color: #F5E5D3 !important;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Table rows - light mode alternating colors */
+:root[data-theme='light'] .sl-markdown-content tbody tr:nth-child(even) {
+  background-color: #FFE4CC;
+}
+
+:root[data-theme='light'] .sl-markdown-content tbody tr:nth-child(odd) {
+  background-color: #FDF8F0;
+}
+
+/* Table rows - dark mode alternating colors */
+.sl-markdown-content tbody tr:nth-child(even) {
+  background-color: #3D1F0A;
+}
+
+.sl-markdown-content tbody tr:nth-child(odd) {
+  background-color: #331808;
+}
+
+/* Table cell padding */
+.sl-markdown-content td {
+  padding: 0.75rem;
+}
+
+/* Light mode background color */
+:root[data-theme='light'] {
+  --sl-color-bg: #FDF8F0;
+}
+
 /* Dark mode colors. */
 :root {
 	--sl-color-accent-low: #421200;
