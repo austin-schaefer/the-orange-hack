@@ -8,11 +8,66 @@
   
   /* Monospace/code - Space Mono */
   --sl-font-system-mono: 'Space Mono', ui-monospace, SFMono-Regular, 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  
+  /* Custom heading font sizes */
+  --sl-text-h2: 2rem; /* 32px - down from default ~35px */
+  --sl-text-h3: 1.625rem; /* 26px - down from default ~29px */
+  --sl-text-h4: 1.375rem; /* 22px - down from default ~24px */
 }
+
+/* Site title styling is now handled in the custom SiteTitle.astro component */
 
 /* Override all other headers (h1–h6) */
 :is(h1, h2, h3, h4, h5, h6):not(.header-title) {
   font-family: 'Alegreya', serif
+}
+
+/* Reduce top margin on h2 headings - override Starlight's default 1.5em */
+.sl-markdown-content h2:not(:where(.not-content *)) {
+  margin-top: 1.0em;
+}
+
+/* Also handle h2 headings with anchor links (wrapped in .sl-heading-wrapper) */
+.sl-markdown-content .sl-heading-wrapper.level-h2 {
+  margin-top: 1.0em;
+}
+
+/* Table styling */
+.sl-markdown-content table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto; /* Allow automatic column sizing */
+}
+
+/* Simplified table styling */
+.sl-markdown-content th {
+  background-color: var(--sl-color-gray-6);
+  color: var(--sl-color-white);
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent text wrapping in headers */
+}
+
+/* Special handling for table headers with code elements */
+.sl-markdown-content th code {
+  white-space: nowrap; /* Ensure code elements don't wrap */
+  font-family: var(--sl-font-system-mono); /* Use monospace font explicitly */
+}
+
+/* Simple alternating rows */
+.sl-markdown-content tbody tr:nth-child(even) {
+  background-color: var(--sl-color-gray-7, var(--sl-color-gray-6));
+}
+
+/* Table cell padding */
+.sl-markdown-content td {
+  padding: 0.75rem;
+}
+
+/* Light mode background color */
+:root[data-theme='light'] {
+  --sl-color-bg: #FDF8F0;
 }
 
 /* Dark mode colors. */
@@ -43,4 +98,9 @@
 	--sl-color-gray-6: #ffe9db;
 	--sl-color-gray-7: #fff4ed;
 	--sl-color-black: #ffffff;
+}
+
+/* Hide social icons container and separator */
+.social-icons {
+	display: none;
 }

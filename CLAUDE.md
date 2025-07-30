@@ -54,6 +54,7 @@ npm run preview
 - **Content-focused** - easy to add new content without touching code
 - **Built-in search** via Starlight
 - **Clean, readable design** prioritized
+- **Component customization okay** - Starlight components can be overridden in `/src/components/` when that's the best solution (cleaner than complex CSS workarounds)
 
 ## Content Structure
 
@@ -71,8 +72,8 @@ npm run preview
 
 - **CLAUDE.md** (this file): Technical guidance for Claude Code instances. Update when tech stack, commands, or collaboration guidelines change.
 - **README.md**: Public-facing project description and setup instructions. Update when project description, installation, or usage changes.
-- **PROJECT_PLAN.md**: Detailed project roadmap and phase planning. Update when adding phases, completing milestones, or changing project scope.
 
 ## Development Best Practices
 
 - Always commit changes after each logical unit of work to maintain a clear, traceable project history
+- **Do not run the dev server to test CSS/styling changes** - Claude cannot see the website, so testing visual changes is not possible
