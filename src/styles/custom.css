@@ -10,6 +10,11 @@
   --sl-font-system-mono: 'Space Mono', ui-monospace, SFMono-Regular, 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
+/* Override all other headers (h1–h6) */
+:is(h1, h2, h3, h4, h5, h6):not(.header-title) {
+  font-family: 'Alegreya', serif
+}
+
 /* Dark mode colors. */
 :root {
 	--sl-color-accent-low: #421200;
